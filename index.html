@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="description" content="أنشئ بريداً إلكترونياً مؤقتاً مجانياً لاستقبال الرسائل لمرة واحدة. تنتهي صلاحية صندوق البريد بعد ساعة تقريباً؛ لا تستخدمه للمعلومات الحساسة.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://mail.hmdevelop.me/">
+  <link rel="alternate" hreflang="ar" href="https://mail.hmdevelop.me/?lang=ar">
+  <link rel="alternate" hreflang="en" href="https://mail.hmdevelop.me/?lang=en">
+  <link rel="alternate" hreflang="fr" href="https://mail.hmdevelop.me/?lang=fr">
+  <link rel="alternate" hreflang="es" href="https://mail.hmdevelop.me/?lang=es">
+  <link rel="alternate" hreflang="de" href="https://mail.hmdevelop.me/?lang=de">
+  <link rel="alternate" hreflang="tr" href="https://mail.hmdevelop.me/?lang=tr">
+  <link rel="alternate" hreflang="ru" href="https://mail.hmdevelop.me/?lang=ru">
+  <link rel="alternate" hreflang="zh" href="https://mail.hmdevelop.me/?lang=zh">
+  <link rel="alternate" hreflang="hi" href="https://mail.hmdevelop.me/?lang=hi">
+  <link rel="alternate" hreflang="pt" href="https://mail.hmdevelop.me/?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://mail.hmdevelop.me/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="بريد مؤقت مجاني | DouNest Mail">
+  <meta property="og:description" content="أنشئ عنواناً مؤقتاً واستقبل البريد الوارد في صندوق ينتهي بعد ساعة تقريباً.">
+  <meta property="og:url" content="https://mail.hmdevelop.me/">
+  <meta property="og:site_name" content="DouNest Mail">
+  <meta name="twitter:card" content="summary">
+  <title>بريد مؤقت مجاني | DouNest Mail</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"DouNest Mail — بريد مؤقت مجاني","description":"أنشئ عنوان بريد مؤقتاً لاستقبال الرسائل لمرة واحدة. تنتهي صناديق البريد بعد ساعة تقريباً.","url":"https://mail.hmdevelop.me/","applicationCategory":"CommunicationApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="https://dounest.hmdevelop.me/" aria-label="DouNest">
+      <span class="brand-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></svg></span>
+      <span>DouNest <small>MAIL</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="back-link" href="https://dounest.hmdevelop.me/" data-copy="back">المزيد من أدوات DouNest</a>
+      <label class="sr-only" for="language">Language</label>
+      <select id="language" aria-label="Language">
+        <option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option><option value="de">Deutsch</option><option value="tr">Türkçe</option><option value="ru">Русский</option><option value="zh">中文</option><option value="hi">हिन्दी</option><option value="pt">Português</option>
+      </select>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="تبديل المظهر"><span id="theme-icon" aria-hidden="true">☾</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow"><span class="status-dot"></span><span data-copy="eyebrow">استقبال مؤقت، بدون تسجيل</span></p>
+      <h1 data-copy="title">بريد مؤقت مجاني</h1>
+      <p class="hero-lead" data-copy="intro">أنشئ عنواناً عشوائياً لاستقبال رسالة لمرة واحدة، من دون تسجيل حساب. لا تستخدمه للخدمات المصرفية أو الحسابات المهمة.</p>
+    </section>
+
+    <section class="mailbox" aria-labelledby="mailbox-heading">
+      <div class="mailbox-topline"><span class="mail-icon" aria-hidden="true">✉</span><div><h2 id="mailbox-heading" data-copy="mailboxTitle">صندوق البريد المؤقت</h2><p data-copy="mailboxSub">عنوان خاص ينتهي تلقائياً بعد ساعة تقريباً</p></div></div>
+      <button class="btn btn-primary btn-create" id="create-inbox" type="button"><span aria-hidden="true">＋</span><span data-copy="create">إنشاء عنوان مؤقت</span></button>
+      <p class="status" id="status" role="status" aria-live="polite" data-copy="statusIdle">أنشئ عنواناً لبدء استقبال البريد.</p>
+      <div id="active-inbox" hidden>
+        <label class="field-label" for="email-address" data-copy="addressLabel">عنوانك المؤقت</label>
+        <div class="address-row"><input id="email-address" type="text" readonly autocomplete="off" spellcheck="false" dir="ltr"><button class="btn btn-secondary" id="copy-address" type="button" data-copy="copy">نسخ العنوان</button></div>
+        <div class="inbox-meta"><p id="expiry" class="expiry" aria-live="polite"></p><div class="actions"><button class="btn btn-secondary" id="refresh-inbox" type="button" data-copy="refresh">تحديث</button><button class="btn btn-danger" id="delete-inbox" type="button" data-copy="delete">حذف العنوان والرسائل</button></div></div>
+        <section class="messages" aria-labelledby="messages-title"><h3 id="messages-title"><span data-copy="inboxTitle">الرسائل الواردة</span> <span class="count" id="message-count"></span></h3><p class="empty-state" id="empty-state" data-copy="noMessages">لا توجد رسائل بعد. أبقِ هذه الصفحة مفتوحة أو اضغط تحديث.</p><div class="message-list" id="message-list"></div></section>
+        <p class="session-note" data-copy="sessionNote">يُحفظ رمز الوصول في مساحة الجلسة لهذا التبويب. إغلاق التبويب يزيل الرمز المحلي فقط؛ تظل النسخة الخادمية حتى حذفها أو انتهاء صلاحيتها.</p>
+      </div>
+      <aside class="safety-note"><strong data-copy="warningTitle">مهم للخصوصية والأمان</strong><p data-copy="warning">تُمرّر الرسائل عبر Resend وتُخزَّن نسخة مؤقتة في قاعدة بيانات DouNest الأوروبية لمدة تصل إلى ساعة. لا تستخدم الخدمة للمعلومات الحساسة. لا تُرسل رسائل صادرة، ولا تُنزّل المرفقات.</p></aside>
+    </section>
+
+    <section class="guide" aria-labelledby="guide-title"><p class="eyebrow" data-copy="guideKicker">خطوات بسيطة</p><h2 id="guide-title" data-copy="guideTitle">كيفية استخدام البريد المؤقت</h2><ol class="steps" id="steps"><li>أنشئ عنواناً مؤقتاً.</li><li>استخدمه لاستقبال رسالة لمرة واحدة.</li><li>اقرأ النص العادي واحذف الصندوق عند الانتهاء.</li></ol></section>
+
+    <section class="faq" aria-labelledby="faq-title"><h2 id="faq-title" data-copy="faqTitle">أسئلة شائعة عن البريد المؤقت</h2><div id="faq-list">
+      <details><summary>كم يبقى العنوان وصندوق البريد؟</summary><p>تنتهي صلاحية الصندوق والرسائل بعد نحو 60 دقيقة، ويمكنك حذف الصندوق مبكراً.</p></details>
+      <details><summary>هل هذا البريد خاص وآمن للحسابات المهمة؟</summary><p>لا. لا تستخدمه للحسابات المصرفية أو الطبية أو استعادة كلمات المرور أو أي معلومات حساسة.</p></details>
+      <details><summary>هل يمكنني إرسال بريد أو تنزيل المرفقات؟</summary><p>لا؛ الخدمة للاستقبال فقط، وتعرض النص العادي ولا تشغل HTML.</p></details>
+    </div></section>
+    <footer><span data-copy="footer">خدمة مستقلة عن أدوات معالجة الملفات المحلية في DouNest.</span> <a href="https://dounest.hmdevelop.me/privacy/" data-copy="privacy">سياسة الخصوصية</a></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
