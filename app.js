@@ -30,8 +30,7 @@ function chooseLanguage(){
   const query = new URLSearchParams(location.search).get("lang");
   if (LANGS.includes(query)) return query;
   try { const saved=localStorage.getItem("dounest-mail-language"); if(LANGS.includes(saved)) return saved; } catch {}
-  const browser=(navigator.language||"en").slice(0,2).toLowerCase();
-  return LANGS.includes(browser)?browser:"en";
+  return "en";
 }
 function el(tag, cls, text){const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=String(text);return node;}
 function readSession(){try{const x=JSON.parse(sessionStorage.getItem(SESSION_KEY)||"null");if(!x||typeof x.address!=="string"||!/^dn-[a-f0-9]{24}@mail\.hmdevelop\.me$/i.test(x.address)||typeof x.token!=="string"||x.token.length<30||!Number.isFinite(Number(x.expiresAt))||Number(x.expiresAt)<=Date.now()){sessionStorage.removeItem(SESSION_KEY);return null;}return{address:x.address,token:x.token,expiresAt:Number(x.expiresAt)};}catch{return null;}}
